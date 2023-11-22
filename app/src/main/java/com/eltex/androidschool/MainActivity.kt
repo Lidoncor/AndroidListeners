@@ -1,6 +1,7 @@
 package com.eltex.androidschool
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.eltex.androidschool.databinding.ActivityMainBinding
 import com.eltex.androidschool.model.Post
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
             post = post.copy(likedByMe = !post.likedByMe)
             bindPost(binding, post)
         }
+
+        binding.menu.setOnClickListener { Toast.makeText(this, R.string.not_implemented, Toast.LENGTH_SHORT).show() }
+
+        binding.share.setOnClickListener { Toast.makeText(this, R.string.not_implemented, Toast.LENGTH_SHORT).show() }
+
     }
 
     private fun bindPost(binding: ActivityMainBinding, post: Post) {
